@@ -31,10 +31,14 @@ const useSignup = () => {
             throw new Error(data.error);
         }
 
+        // code for redirect to signup page after home page
+
         // localstorage
         localStorage.setItem("chat-user",JSON.stringify(data));
         // context
         setAuthUser(data);
+
+        // code for end here of redirect signup to home
 
     } catch (error) {
         toast.error(error.message);
